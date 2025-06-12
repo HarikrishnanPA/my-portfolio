@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harikrishnan - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HOME SECTION -->
+  <div class="container">
+    <img class="profile-img" src="assets/profile.jpg" alt="Harikrishnan photo">
+    <div class="content">
+      <div class="greeting">
+        <img src="assets/hi-portfolio.png" class="hand-img" alt="waving hand" />
+        <span>Hi there,</span>
+      </div>
+      <div class="iam">I AM</div>
+      <div class="name">Harikrishnan</div>
+      <div class="description">
+        Aspiring software developer passionate about building impactful digital solutions with clean code and creative thinking.
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="about-title">About me</div>
+    <div class="about-box">
+      <p>
+        Hi, I’m P. A. Harikrishnan — a Computer Science and Engineering graduate from Rajiv Gandhi Institute of Technology, Kottayam. I’m passionate about creating practical and user-friendly software solutions. With a solid foundation in programming languages like C, Java, and Python, along with experience in MySQL and MongoDB, I enjoy solving problems and bringing ideas to life through code.
+      </p>
+      <br />
+      <p>
+        Beyond technology, I’m someone who finds inspiration in music, books, travel, and swimming. These hobbies help me stay balanced, creative, and open to new perspectives in both life and work.
+      </p>
+    </div>
+  </section>
+
+  <section class="skills-section">
+  <div class="skills-title">My skills</div>
+  <div class="skills-container">
+    <div class="skill">C programming</div>
+    <div class="skill">Python</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">Operating systems</div>
+    <div class="skill">Data Structures</div>
+    <div class="skill">Algorithms</div>
+    <div class="skill">OOPS</div>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="projects-title">My projects</div>
+  
+  <div class="project-box">
+    <h2>DanaSetu</h2>
+    <p>
+      DanaSetu is a charity-based mobile application developed using the MERN stack.
+      The app serves as a platform to connect donors and receivers in need, aiming to make
+      the donation process more accessible, transparent, and impactful. It features user
+      authentication, a clean and responsive interface, and a secure backend for managing user
+      and donation data. Working on DanaSetu helped me strengthen my full-stack development skills
+      and understand the importance of building solutions that solve real-world problems efficiently.
+    </p>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="project-box">
+    <h2>CARA</h2>
+    <p>
+      CARA (Career Recommendation and Assistance) is a web-based career guidance application that helps
+      users identify suitable IT career paths based on their skills, interests, and personality traits.
+      The system uses a machine learning model trained on a dataset containing 36 user attributes to predict
+      2–3 potential job roles for each individual. In addition to personalized recommendations, CARA provides
+      career roadmaps, job search functionality, and a recruiter portal. I was responsible for building and
+      integrating the ML model, which gave me hands-on experience in data preprocessing, model selection,
+      and real-world application of AI in career planning.
+    </p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-title">Contact me</div>
+  <div class="contact-info">
+    <p><strong>Phone:</strong> +91 7736566499</p>
+    <p><strong>Email:</strong> <a href="mailto:paharikrishnan.mail@gmail.com">paharikrishnan.mail@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/p-a-hari-krishnan" target="_blank">linkedin.com/in/p-a-hari-krishnan</a></p>
+  </div>
+</section>
+
+
+
+
+  <!-- SCROLL EFFECT SCRIPT -->
+  <script>
+    const aboutBox = document.querySelector('.about-box');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutBox.classList.add('visible');
+          observer.unobserve(entry.target); // animate only once
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    observer.observe(aboutBox);
+  </script>
+
+</body>
+</html>
